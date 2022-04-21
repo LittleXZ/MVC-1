@@ -1,0 +1,14 @@
+#yuan{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fc5c7d;
+}
+@keyframes wow {
+    0%{background-color: #fc5c7d}
+    50%{background-color: #6a82fb}
+    100%{background-color: #fc5c7d}
+}
+#yuan.active{
+    animation: wow 2s infinite linear;
+}

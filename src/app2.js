@@ -1,0 +1,34 @@
+import './app2.css'
+
+
+let navbar = document.querySelector(`#navbar`)
+let wrapContent = document.querySelector(`#wrap-content`)
+let index = localStorage.getItem(`index`) || 1
+document.querySelector(`#content${index}`).classList.add(`active`)
+document.querySelector(`#tag${index}`).classList.add(`active`)
+
+navbar.childNodes.forEach((e)=>{
+    if (e.nodeName === `#text`){
+        navbar.removeChild(e)
+    }
+})
+wrapContent.childNodes.forEach((e)=>{
+    if (e.nodeName === `#text`){
+        wrapContent.removeChild(e)
+    }
+})
+
+navbar.addEventListener(`click`,(e)=>{
+    let ele = e.currentTarget
+    for (let i=0; i<ele.childNodes.length;i++){
+        ele.childNodes[i].classList.remove(`active`)
+    }
+    for (let i=0; i<wrapContent.childNodes.length;i++){
+        wrapContent.childNodes[i].classList.remove(`active`)
+    }
+    e.target.classList.add(`active`)
+    index = Array.prototype.indexOf.call(ele.childNodes,e.target);
+    index += 1
+    document.querySelector(`#content${index}`).classList.add(`active`)
+    localStorage.setItem(`index`,index)
+})

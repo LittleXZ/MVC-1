@@ -1,0 +1,12 @@
+::-webkit-scrollbar {
+    display: none;
+}
+#wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+#wrap>div{
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid black;
+}
