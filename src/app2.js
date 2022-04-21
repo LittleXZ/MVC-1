@@ -1,5 +1,17 @@
 import './app2.css'
 
+let html = document.createElement(`section`)
+html.innerHTML = `<div id="app2">
+        <div id="navbar">
+            <div id="tag1" class="tag tag-style">tag1</div>
+            <div id="tag2" class="tag tag-style">tag2</div>
+        </div>
+        <div id="wrap-content">
+            <div id="content1" class="content">content1</div>
+            <div id="content2" class="content">content2</div>
+        </div>
+    </div>`
+document.querySelector(`#wrap`).appendChild(html)
 
 let navbar = document.querySelector(`#navbar`)
 let wrapContent = document.querySelector(`#wrap-content`)

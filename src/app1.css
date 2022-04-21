@@ -1,4 +1,6 @@
 #app1{
+    min-height: 100%;
+    min-width: 100%;
     display: grid;
     grid-template-columns: repeat(6,10%);
     grid-template-rows: repeat(4,10%);

@@ -1,5 +1,15 @@
 import './app1.css'
 
+let html = document.createElement(`section`)
+html.innerHTML = `<div id="app1">
+        <span id="text">100</span>
+        <button id="jia">+1</button>
+        <button id="jian">-1</button>
+        <button id="cheng">x2</button>
+        <button id="chu">÷2</button>
+    </div>`
+document.querySelector(`#wrap`).appendChild(html)
+
 let app1_n
 let app1 = document.querySelector(`#app1`)
 let text = document.querySelector(`#text`)
